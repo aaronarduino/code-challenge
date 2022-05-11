@@ -10,18 +10,15 @@ namespace code_challenge
 
         static void Main(string[] args)
         {
-            Dictionary<char, bool> d = new Dictionary<char, bool>();
-
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Hello!");
             Console.WriteLine();
             Console.WriteLine("Please enter chars:");
             string userInput = Console.ReadLine().ToUpper();
-
             string result = String.Concat(Alphabet.Where(c => !userInput.Contains(c)));
-
             Console.WriteLine();
             Console.WriteLine("The result is:");
             Console.WriteLine(result);
+            Console.WriteLine($"The number of chars in the result: {result.Length}");
         }
     }
 }
